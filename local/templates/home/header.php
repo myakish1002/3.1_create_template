@@ -1,39 +1,40 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<?php
-use Bitrix\Main\Page\Asset;
 
-Asset::getInstance()->addCss("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/fonts/icomoon/style.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap.min.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/magnific-popup.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/jquery-ui.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/owl.carousel.min.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/owl.theme.default.min.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap-datepicker.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/mediaelementplayer.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/animate.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/fonts/flaticon/font/flaticon.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/fl-bigmug-line.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/aos.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");
-
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.3.1.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-migrate-3.0.1.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-ui.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/popper.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/mediaelement-and-player.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.stellar.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.countdown.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.magnific-popup.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap-datepicker.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/aos.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=LANGUAGE_ID?>">
   <head>
+	<?php
+	use Bitrix\Main\Page\Asset;
+
+	Asset::getInstance()->addCss("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/fonts/icomoon/style.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap.min.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/magnific-popup.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/jquery-ui.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/owl.carousel.min.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/owl.theme.default.min.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap-datepicker.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/mediaelementplayer.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/animate.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/fonts/flaticon/font/flaticon.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/fl-bigmug-line.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/aos.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");
+	
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.3.1.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-migrate-3.0.1.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-ui.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/popper.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/mediaelement-and-player.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.stellar.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.countdown.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.magnific-popup.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap-datepicker.min.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/aos.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
+	?>
     <title><?$APPLICATION->ShowTitle()?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -77,7 +78,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
-              <h1 class=""><a href="index.html" class="h5 text-uppercase text-black"><strong>HomeSpace<span class="text-danger">.</span></strong></a></h1>
+              <h1 class=""><a href="<?=SITE_DIR?>" class="h5 text-uppercase text-black"><strong>HomeSpace<span class="text-danger">.</span></strong></a></h1>
             </div>
             <div class="col-4 col-md-4 col-lg-8">
               <nav class="site-navigation text-right text-md-right" role="navigation">
@@ -86,7 +87,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li class="active">
-                    <a href="index.html">Home</a>
+                    <a href="<?=SITE_DIR?>">Home</a>
                   </li>
                   <li class="has-children">
                     <a href="properties.html">Properties</a>
